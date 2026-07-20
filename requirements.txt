@@ -1,0 +1,10 @@
+# ── Embedding pipeline dependencies ──────────────────────────────────
+# Tested with Python 3.10 - 3.12
+
+sentence-transformers>=3.0.0     # loads BAAI/bge-m3 / e5 etc.
+transformers>=4.40.0             # tokenizer used for token-accurate chunking
+torch>=2.2.0                     # backend for the embedding model
+chromadb>=0.5.0                  # persistent vector database
+python-dotenv>=1.0.0             # reads the .env config
+tqdm>=4.66.0                     # progress bars
+rank-bm25>=0.2.2                 # keyword index for hybrid retrieval (build_bm25_index.py)
