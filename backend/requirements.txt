@@ -1,0 +1,20 @@
+# ── Backend API dependencies ─────────────────────────────────────────
+# Tested with Python 3.10 - 3.12
+# Install the root requirements.txt FIRST (embedding pipeline deps: torch,
+# sentence-transformers, chromadb, rank-bm25) -- the retriever service
+# needs those too, since it loads the same embedding model used at
+# ingestion time plus ChromaDB and the BM25 index.
+#
+#   pip install -r requirements.txt
+#   pip install -r backend/requirements.txt
+
+fastapi>=0.115.0
+uvicorn[standard]>=0.34.0
+pydantic>=2.10.0
+openai>=1.50.0          # OpenRouter uses an OpenAI-compatible client
+python-dotenv>=1.0.0
+chromadb>=1.5.9
+torch>=2.13.0
+sentence-transformers>=5.6.0
+rank_bm25>=0.2.2
+python-multipart>=0.0.32
